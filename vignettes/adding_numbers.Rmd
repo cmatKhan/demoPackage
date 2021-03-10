@@ -1,0 +1,25 @@
+---
+title: "adding_numbers"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{adding_numbers}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+NOTE: dependencies in the 'depends:' category of the DESCRIPTION are loaded automatically with your package when the library() function is called. dependencies in the 'imports:' statement in the DESCRIPTION file are downloaded (unless they are already present in the user's library), but are not loaded. For example, if you need readr in the vignette, but not in the 'source' R functions, then you'd put that in imports. If you need ggplot in a 'source' R file, then you'd put that in 'depends:'
+```{r setup}
+library(demoPackage)
+```
+
+```{r}
+add(x, 2)
+```
+
